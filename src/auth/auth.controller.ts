@@ -1,8 +1,8 @@
-import { Body, Controller, Post, UnauthorizedException, UseGuards, BadRequestException, Request } from '@nestjs/common';
+import { Body, Controller, Post, UnauthorizedException, , BadRequestException, Request } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { loginDTO, signupDTO } from './DTOs/AuthDTO';
 import { User } from 'src/user/schema/user.schema';
-import { JwtAuthGuard } from './jwt.auth.guard';
+
 
 @Controller('auth')
 export class AuthController {
