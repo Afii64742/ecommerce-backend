@@ -40,7 +40,7 @@ export class AuthService {
     return result
   }
 
-  // Validate user
+
   async validateUser(loginDTO: loginDTO): Promise<User> {
     const { email, password } = loginDTO;
     const user = await this.userModel.findOne({ email });
