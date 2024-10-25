@@ -1,7 +1,8 @@
-import { Body, Controller, Post, UnauthorizedException, BadRequestException } from '@nestjs/common';
+import { Body, Controller, Post, UnauthorizedException,  BadRequestException } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { loginDTO, signupDTO } from './DTOs/AuthDTO';
 import { User } from 'src/user/schema/user.schema';
+
 
 @Controller('auth')
 export class AuthController {
@@ -26,4 +27,5 @@ export class AuthController {
       throw new UnauthorizedException('Invalid credentials');  
     }
   }
+
 }
