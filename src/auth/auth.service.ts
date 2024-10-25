@@ -5,12 +5,14 @@ import { User, UserDocument } from 'src/user/schema/user.schema';
 import { loginDTO, signupDTO } from './DTOs/AuthDTO';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
+import { RefreshToken } from './refreshToken.service';
 
 @Injectable()
 export class AuthService {
   constructor(
     @InjectModel(User.name) private userModel: Model<UserDocument>,
-    private jwtService: JwtService
+    private jwtService: JwtService,
+    private refreshTokenService:RefreshToken
   ) {}
 
   // Signup User
@@ -61,4 +63,6 @@ export class AuthService {
     const accessToken = this.jwtService.sign(payload);
     return { accessToken };
   }
+
+  //
 }
