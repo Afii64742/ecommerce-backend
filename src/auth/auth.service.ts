@@ -15,7 +15,7 @@ export class AuthService {
     private refreshTokenService:RefreshToken
   ) {}
 
-  // Signup User
+
   async signup(signupDTO: signupDTO): Promise<Omit<User, 'password'>> {
     console.log("signupdto->",signupDTO)
     const { name, email, password } = signupDTO;
