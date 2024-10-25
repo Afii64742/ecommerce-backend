@@ -13,7 +13,7 @@ export class AuthService {
     private jwtService: JwtService
   ) {}
 
-  // Signup User
+
   async signup(signupDTO: signupDTO): Promise<Omit<User, 'password'>> {
     console.log("signupdto->",signupDTO)
     const { name, email, password } = signupDTO;
