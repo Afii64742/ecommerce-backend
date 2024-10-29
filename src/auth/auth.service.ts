@@ -6,7 +6,6 @@ import { loginDTO, signupDTO } from './DTOs/AuthDTO';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { RefreshToken } from './refreshToken.service';
-import { throwError } from 'rxjs';
 
 @Injectable()
 export class AuthService {
